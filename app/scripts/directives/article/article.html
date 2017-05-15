@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+    <!-- Blog Post -->
+
+    <!-- Title -->
+    <h1>{{article.title}}</h1>
+
+    <!-- Author -->
+    <p class="lead">
+        by <a ng-href="/#/user/{{article.user.idUser}}">{{article.user.username}}</a>
+    </p>
+
+    <hr>
+
+    <!-- Date/Time -->
+    <p><span class="glyphicon glyphicon-time"></span> Posted on August {{article.created | date:'MMM d, y h:mm:ss'}}</p>
+
+    <hr>
+
+    <!-- Preview Image -->
+    <div ng-if="article.imageLinks.length">
+    	<img class="img-responsive" ng-src="{{article.imageLinks}}" alt="">
+    	<hr>
+    </div>
+
+    <!-- Preview Video -->
+    <div ng-if="article.videoLinks.length">
+    	<div>(Video) Implement me</div>
+    	<div>
+    		<small>url: <a href="{{article.videoLinks}}">{{article.videoLinks}}</a></small>
+    	</div>
+    	<hr>
+    </div>
+
+    <!-- Post Content -->
+    <p class="lead">
+    	{{article.textContent}}
+    </p>
+
+    <hr>
+
+    <!-- Blog Comments -->
+
+    <!-- Comments Form -->
+    <comment-form form-data="commentFormData" add-comment="addComment()"></comment-form>
+
+    <hr>
+
+    <!-- Posted Comments -->
+
+    <comments list="[]"></comments>
+
+</div>

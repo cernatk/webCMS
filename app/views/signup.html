@@ -1,0 +1,32 @@
+<form class="form" ng-click="clearError()">
+  <div class="form-group row">
+    <label for="title-input" class="col-2 col-form-label">Nick Name</label>
+    <div class="col-10">
+      <input class="form-control" type="text" ng-model="userName" id="title-input">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="body-input" class="col-2 col-form-label">First Name</label>
+    <div class="col-10">
+      <input class="form-control" type="text" ng-model="firstName" id="body-input">
+    </div>
+
+  </div>
+  <div class="form-group row">
+    <label for="body-input" class="col-2 col-form-label">Last Name</label>
+    <div class="col-10">
+      <input class="form-control" type="text" ng-model="lastName" id="body-input">
+    </div>
+    
+  </div>
+  <div class="form-group row">
+    <label for="user-id-input" class="col-2 col-form-label">Password</label>
+    <div class="col-10">
+      <input class="form-control" type="Password" ng-model="age" id="user-id-input">
+    </div>
+  </div>
+  <div class="alert alert-danger" role="alert" ng-show="errorMessage !== null" ng-click="clearError()">
+  	<strong>Erorr!</strong> {{ errorMessage }}
+  </div>
+  <input type="submit" name="" ng-click="signupFunc()" value="Signup" />
+</form>

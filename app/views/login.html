@@ -1,0 +1,18 @@
+<form class="form" >
+	<div class="form-group row">
+		<label for="emailInput" class="col-2 col-form-label">Email</label>
+		<div class="col-10">
+			<input class="form-control" type="text" ng-model="formData.email" id="emailInput">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="passwordInput" class="col-2 col-form-label">Password</label>
+		<div class="col-10">
+			<input class="form-control" type="password" ng-model="formData.password" id="passwordInput">
+		</div>
+	</div>
+	<div class="alert alert-danger" role="alert" ng-show="errorMessage !== null" ng-click="clearError()">
+		<strong>Erorr!</strong> {{ errorMessage }}
+	</div>
+	<input type="submit" class="btn btn-default" name="submit" value="Login" ng-click="loginFunction()" />
+</form>

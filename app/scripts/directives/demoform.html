@@ -1,0 +1,21 @@
+<form class="form">
+  <div class="form-group row">
+    <label for="title-input" class="col-2 col-form-label">Title</label>
+    <div class="col-10">
+      <input class="form-control" type="text" ng-model="internalFormData.title" id="title-input">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="body-input" class="col-2 col-form-label">Body</label>
+    <div class="col-10">
+      <input class="form-control" type="text" ng-model="internalFormData.body" id="body-input">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="user-id-input" class="col-2 col-form-label">User ID</label>
+    <div class="col-10">
+      <input class="form-control" type="number" ng-model="internalFormData.userId" id="user-id-input">
+    </div>
+  </div>
+  <input type="submit" name="" ng-click="submitForm()" value="Buton de Submit" />
+</form>
